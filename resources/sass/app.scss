@@ -1,0 +1,146 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.tab-container{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 80%;
+    margin: auto;
+
+    .tab-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+
+        a{
+            text-decoration: none;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: yellowgreen;
+        }
+    }
+
+    table{
+        margin: auto;
+        margin-top: 50px;
+        border: 1px solid black;
+        border-collapse: collapse;
+
+        thead{
+            th{
+                padding: 10px;
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: left;
+
+                &:last-of-type{
+                    text-align: center;
+                }
+            }
+        }
+
+        tbody{
+            tr{
+                td{
+                    text-align: left;
+                    padding: 15px 10px;
+                    padding-right: 70px;
+                    border: 1px solid black;
+
+                    &:last-of-type{
+                        padding: 15px 50px;
+                        text-align: center;
+                        form{
+                            display: inline;
+                            input{
+                                background-color: red;
+                                border: none;
+                                font-size: 16px;
+                                border-radius: 3px;
+                                height: 29px;
+                                padding: 0 12px;
+                                cursor: pointer;
+                                &:active{
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        padding: 5px;
+                        border-radius: 3px;
+                        &.details{
+                            background-color: lightblue;
+                            margin-right: 10px;
+                        }
+                        &.modify{
+                            background-color: green;
+                            margin-right: 10px;
+                        }
+                        &.delete{
+                            background-color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.form-container{
+    height: 90vh;
+    width: 50%;
+    margin: auto;
+    margin-top: 70px;
+
+    form{
+        display: flex;
+        flex-direction: column;
+
+        .form-section{
+            margin-bottom: 25px;
+
+            input, textarea{
+                border: 1px solid lightgrey;
+                border-radius: 5px;
+                padding: 5px;
+                margin-top: 15px;
+                display: block;
+                width: 100%;
+
+                &:focus{
+                    outline-style: none;
+                }
+            }
+
+            p{
+                font-size: 13px;
+                margin-top: 5px;
+                color: red;
+            }
+        }
+
+        .form-submit{
+            input{
+                width: 25%;
+                background-color: yellowgreen;
+                border: none;
+                border-radius: 5px;
+                padding: 10px;
+            }
+        }
+    }
+}
