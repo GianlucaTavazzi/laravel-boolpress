@@ -7,14 +7,16 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.tab-container{
+.tab-container,
+.show-container{
     display: flex;
     flex-direction: column;
     height: 90vh;
     width: 80%;
     margin: auto;
 
-    .tab-header{
+    .tab-header,
+    .show-header{
         display: flex;
         justify-content: space-between;
         align-items: center;

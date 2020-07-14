@@ -10928,7 +10928,8 @@ a.text-dark:focus {
   }
 }
 
-.tab-container {
+.tab-container,
+.show-container {
   display: flex;
   flex-direction: column;
   height: 90vh;
@@ -10936,14 +10937,20 @@ a.text-dark:focus {
   margin: auto;
 }
 
-.tab-container .tab-header {
+.tab-container .tab-header,
+.tab-container .show-header,
+.show-container .tab-header,
+.show-container .show-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
 }
 
-.tab-container .tab-header a {
+.tab-container .tab-header a,
+.tab-container .show-header a,
+.show-container .tab-header a,
+.show-container .show-header a {
   text-decoration: none;
   color: black;
   padding: 5px 10px;
@@ -10951,41 +10958,48 @@ a.text-dark:focus {
   background-color: yellowgreen;
 }
 
-.tab-container table {
+.tab-container table,
+.show-container table {
   margin: auto;
   margin-top: 50px;
   border: 1px solid black;
   border-collapse: collapse;
 }
 
-.tab-container table thead th {
+.tab-container table thead th,
+.show-container table thead th {
   padding: 10px;
   border: 1px solid black;
   border-collapse: collapse;
   text-align: left;
 }
 
-.tab-container table thead th:last-of-type {
+.tab-container table thead th:last-of-type,
+.show-container table thead th:last-of-type {
   text-align: center;
 }
 
-.tab-container table tbody tr td {
+.tab-container table tbody tr td,
+.show-container table tbody tr td {
   text-align: left;
   padding: 15px 10px;
   padding-right: 70px;
   border: 1px solid black;
 }
 
-.tab-container table tbody tr td:last-of-type {
+.tab-container table tbody tr td:last-of-type,
+.show-container table tbody tr td:last-of-type {
   padding: 15px 50px;
   text-align: center;
 }
 
-.tab-container table tbody tr td:last-of-type form {
+.tab-container table tbody tr td:last-of-type form,
+.show-container table tbody tr td:last-of-type form {
   display: inline;
 }
 
-.tab-container table tbody tr td:last-of-type form input {
+.tab-container table tbody tr td:last-of-type form input,
+.show-container table tbody tr td:last-of-type form input {
   background-color: red;
   border: none;
   font-size: 16px;
@@ -10995,28 +11009,33 @@ a.text-dark:focus {
   cursor: pointer;
 }
 
-.tab-container table tbody tr td:last-of-type form input:active {
+.tab-container table tbody tr td:last-of-type form input:active,
+.show-container table tbody tr td:last-of-type form input:active {
   color: black;
 }
 
-.tab-container table tbody tr td a {
+.tab-container table tbody tr td a,
+.show-container table tbody tr td a {
   text-decoration: none;
   color: black;
   padding: 5px;
   border-radius: 3px;
 }
 
-.tab-container table tbody tr td a.details {
+.tab-container table tbody tr td a.details,
+.show-container table tbody tr td a.details {
   background-color: lightblue;
   margin-right: 10px;
 }
 
-.tab-container table tbody tr td a.modify {
+.tab-container table tbody tr td a.modify,
+.show-container table tbody tr td a.modify {
   background-color: green;
   margin-right: 10px;
 }
 
-.tab-container table tbody tr td a.delete {
+.tab-container table tbody tr td a.delete,
+.show-container table tbody tr td a.delete {
   background-color: red;
 }
 
