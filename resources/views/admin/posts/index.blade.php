@@ -11,7 +11,8 @@
                 <th>ID</th>
                 <th>Titolo</th>
                 <th>Slug</th>
-                 <th>Azioni</th>
+                <th>Categoria</th>
+                <th>Azioni</th>
             </thead>
             <tbody>
                 @forelse ($posts as $post)
@@ -19,6 +20,7 @@
                         <td> {{ $post->id }} </td>
                         <td> {{ $post->title }} </td>
                         <td> {{ $post->slug }} </td>
+                        <td> {{ $post->category->name ?? '-' }} </td>
                         <td>
                             <a class="details" href="{{ route('admin.posts.show', ['post' => $post->id])}}">Dettagli</a>
                             <a class="modify" href="{{ route('admin.posts.edit', ['post' => $post->id])}}">Modifica</a>

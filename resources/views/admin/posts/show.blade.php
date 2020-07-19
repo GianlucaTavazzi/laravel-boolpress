@@ -10,6 +10,7 @@
             <p>Titolo: {{ $post->title }} </p>
             <p>Testo: {{$post->content}} </p>
             <p>Slug: {{$post->slug}} </p>
+            <p>Categoria: {{$post->category->name ?? '-'}} </p>
             <p>Creato il: {{$post->created_at}} </p>
             <p>Modificato il: {{$post->updated_at}} </p>
         </div>
