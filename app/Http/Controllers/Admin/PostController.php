@@ -6,20 +6,22 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Category;
+use App\Tag;
 use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('category')->get();
+        $posts = Post::with('category', 'tags')->get();
         return view('admin.posts.index', compact('posts'));
     }
 
     public function create()
     {
         $categories = Category::all();
-        return view('admin.posts.create', compact('categories'));
+        $tags = Tag::all();
+        return view('admin.posts.create', compact('categories', 'tags'));
     }
 
     public function store(Request $request)

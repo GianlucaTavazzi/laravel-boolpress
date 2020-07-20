@@ -17,9 +17,20 @@
                 <select id="categoria" name="category_id">
                     <option value="">Seleziona categoria</option>
                     @foreach ($categories as $category)
-                        <option value="{{ $category-> id}}"> {{ $category-> name}} </option>
+                        <option {{ old('category_id') == $category->id ? 'selected' : '' }} value="{{ $category-> id}}"> {{ $category-> name}} </option>
                     @endforeach
                 </select>
+            </div>
+            <div class="form-section">
+                <p>Seleziona Tag:</p>
+                @foreach ($tags as $tag)
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="tags[]" value="{{ $tag->id }}">
+                            {{ $tag->name }}
+                        </label>
+                    </div>
+                @endforeach
             </div>
             <div class="form-submit">
                 <input type="submit" value="Inserisci nuovo post">
